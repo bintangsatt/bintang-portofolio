@@ -6,8 +6,8 @@ import { useRef } from 'react'
 import SectionHeading from '@/components/ui/SectionHeading'
 
 const stats = [
-  { value: '2+', label: 'Years building' },
-  { value: '5+', label: 'Projects shipped' },
+  { value: '1+', label: 'Years building' },
+  { value: '2', label: 'Projects shipped' },
   { value: '∞', label: 'Lines debugged' },
 ]
 
@@ -40,7 +40,7 @@ export default function AboutSection() {
             className="space-y-5 text-textSecondary leading-relaxed"
           >
             <p>
-              I&apos;m a <span className="text-textPrimary font-medium">final-year Informatics Engineering student</span>{' '}
+              I&apos;m a <span className="text-textPrimary font-medium">Fresh Graduate Informatics Engineering</span>{' '}
               passionate about building systems that are not just functional, but built to scale. My focus sits at the
               intersection of backend architecture and modern web development.
             </p>

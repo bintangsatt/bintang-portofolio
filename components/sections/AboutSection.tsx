@@ -95,7 +95,7 @@ export default function AboutSection() {
                   <p><span className="text-accentPurple">"role"</span>: <span className="text-emerald-400">"Full-Stack Developer"</span>,</p>
                   <p><span className="text-accentPurple">"focus"</span>: <span className="text-emerald-400">"Backend Architecture"</span>,</p>
                   <p><span className="text-accentPurple">"passion"</span>: <span className="text-emerald-400">"Microservices & DDD"</span>,</p>
-                  <p><span className="text-accentPurple">"status"</span>: <span className="text-emerald-400">"Final Year Student"</span>,</p>
+                  <p><span className="text-accentPurple">"status"</span>: <span className="text-emerald-400">"Fresh Graduate"</span>,</p>
                   <p><span className="text-accentPurple">"looking_for"</span>: <span className="text-emerald-400">"Great Challenges"</span></p>
                 </div>
                 <p className="pt-1"><span className="text-accent">$</span> <span className="text-textMuted animate-pulse">▌</span></p>

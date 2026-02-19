@@ -7,23 +7,10 @@ export const personal = {
   title: 'Full-Stack Developer',
   subtitle: 'Microservice Enthusiast',
   tagline: 'I build scalable web systems using microservice architecture and modern web technologies.',
-  email: 'bintangsatrio@email.com',
-  github: 'https://github.com/bintangsattt',
+  email: 'bintangsatrioa@email.com',
+  github: 'https://github.com/bintangsatt',
   linkedin: 'https://linkedin.com/in/bintang-satrio-aji',
-
-  // ─────────────────────────────────────────────────────────────
-  // FOTO PROFIL
-  // Taruh foto di: public/images/photo.jpg (atau .png / .webp)
-  // Lalu ganti nilai di bawah, contoh: '/images/photo.jpg'
-  // Kosongkan string '' jika belum ada foto (tampil avatar inisial)
-  // ─────────────────────────────────────────────────────────────
   photoUrl: '' as string,
-
-  // ─────────────────────────────────────────────────────────────
-  // CV / RESUME
-  // Taruh file CV di: public/cv-bintang-satrio.pdf
-  // Pastikan nama file sama persis dengan yang di bawah
-  // ─────────────────────────────────────────────────────────────
   cvUrl: '/cv-bintang-satrio-aji.pdf',
 }
 

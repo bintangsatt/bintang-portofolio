@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================================
+   CSS VARIABLES — Dark Mode (default)
+================================================================ */
+:root,
+html.dark {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --bg:           #080C14;
+  --surface:      #0D1321;
+  --surface-high: #111827;
+  --border:       #1E2A3A;
+  --accent:       #4F8EF7;
+  --accent-p:     #7C5CFC;
+  --accent-c:     #22D3EE;
+  --text-1:       #E8EDF5;
+  --text-2:       #8A9BB0;
+  --text-muted:   #4A5568;
+  --sidebar-bg:   rgba(13, 19, 33, 0.88);
+  --sidebar-border: rgba(30, 42, 58, 0.9);
+}
+
+/* ================================================================
+   CSS VARIABLES — Light Mode
+================================================================ */
+html.light {
+  --bg:           #EEF2F8;
+  --surface:      #FFFFFF;
+  --surface-high: #F5F8FD;
+  --border:       #D2DCF0;
+  --accent:       #2B6EF5;
+  --accent-p:     #6C3FE8;
+  --accent-c:     #0BAFC7;
+  --text-1:       #0F172A;
+  --text-2:       #475569;
+  --text-muted:   #94A3B8;
+  --sidebar-bg:   rgba(255, 255, 255, 0.94);
+  --sidebar-border: rgba(200, 214, 232, 0.95);
+}
+
+/* ================================================================
+   BASE
+================================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth;  }
+
+body {
+  background-color: var(--bg);
+  color: var(--text-1);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+/* ================================================================
+   SIDEBAR LAYOUT
+================================================================ */
+@media (min-width: 1024px) {
+  .main-content {
+    padding-left: calc(288px + 48px);
+    padding-right: 24px;
+  }
+}
+
+/* ================================================================
+   SIDEBAR CARD
+================================================================ */
+.sidebar-card {
+  background: var(--sidebar-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--sidebar-border);
+}
+
+.sidebar-btn {
+  background: transparent;
+  color: var(--text-2);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.sidebar-btn:hover {
+  background: rgba(79, 142, 247, 0.08);
+  color: var(--text-1);
+  border-color: var(--border);
+}
+html.light .sidebar-btn:hover { background: rgba(43, 110, 245, 0.07); }
+
+.sidebar-btn-accent {
+  background: rgba(79, 142, 247, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(79, 142, 247, 0.28);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.sidebar-btn-accent:hover { background: rgba(79, 142, 247, 0.22); }
+
+/* ================================================================
+   GLASS
+================================================================ */
+.glass {
+  background: rgba(13, 19, 33, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 42, 58, 0.8);
+}
+html.light .glass {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(200, 214, 230, 0.9);
+}
+
+/* ================================================================
+   SCROLLBAR
+================================================================ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+::selection { background: rgba(79, 142, 247, 0.25); color: var(--text-1); }
+
+/* ================================================================
+   GRID BG
+================================================================ */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(79,142,247,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79,142,247,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+html.light .grid-bg {
+  background-image:
+    linear-gradient(rgba(43,110,245,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43,110,245,0.05) 1px, transparent 1px);
+}
+
+/* ================================================================
+   NOISE
+================================================================ */
+.noise::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  z-index: 9999;
+}
+
+/* ================================================================
+   TEXT GRADIENT
+================================================================ */
+.text-gradient-blue {
+  background: linear-gradient(135deg, var(--accent), var(--accent-c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-purple {
+  background: linear-gradient(135deg, var(--accent-p), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================================================
+   SECTION PADDING
+================================================================ */
+.section-padding { padding: 80px 0; }
+@media (max-width: 1024px) { .section-padding { padding: 60px 0; } }
+
+/* ================================================================
+   SMOOTH THEME TRANSITION (non-animation elements only)
+================================================================ */
+body, .glass, .sidebar-card, section, div, span, p, h1, h2, h3, h4, a, button, input, textarea {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.15s ease;
+}

@@ -82,7 +82,7 @@ export default function ContactSection() {
                   <Github size={16} className="text-textSecondary group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-sm text-textSecondary group-hover:text-textPrimary transition-colors font-mono">
-                  github.com/bintangsatrio
+                  github.com/bintangsatt
                 </span>
               </a>
               <a
@@ -95,7 +95,7 @@ export default function ContactSection() {
                   <Linkedin size={16} className="text-textSecondary group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-sm text-textSecondary group-hover:text-textPrimary transition-colors font-mono">
-                  linkedin.com/in/bintangsatrio
+                  linkedin.com/in/bintang-satrio-aji
                 </span>
               </a>
             </div>
